@@ -10,7 +10,7 @@
 
     &__images {
         left: 32px;
-        top: 100px;
+        top: 200px;
         position: relative;
         width: 1216px; 
         height: 1020px; 
@@ -41,7 +41,7 @@
      }
 
     &__title {
-        top: -8%;
+        top: 10%;
         text-align: center;
         position: absolute;
         color: white; 
@@ -149,21 +149,95 @@
 }
 
 //responsive
+/* Estilos predeterminados para pantallas de 760px o más */
+/* Estilos para pantallas en el rango entre 760px y 1280px */
+@media screen and (min-width: 760px) {
 
-@media screen and (min-width: 1280px) {
-    .container_subscribe {
-        background-color: #AE1332;
-        width: 1280px;
-        margin: auto;
-        padding: 0%;    
-    }
+    .subscribe{
+&__blocks {
+    width: 100%;
+    height: 695px; 
+    position: relative;
+    display: flex;
 }
 
-@media screen and (min-width: 768px) {
-    .container_subscribe {
-        background-color: #AE1332;
-        width: 1280px;
-        margin: auto;
-        padding: 0%;
+&__images {
+    left: 32px;
+    top: 200px;
+    position: relative;
+    width: 1216px; 
+    height: 1020px; 
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    gap: 24px; 
+    display: inline-flex;
+    overflow: hidden;
+}
+
+&__image1 {
+    width: 335px; 
+    height: 476px; 
+    left: 20px; 
+    top: 6395px; 
+    position: absolute; 
+    border-radius: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+&__image2 {
+    width: 400px;
+    height: 502px;
+    border-radius: 20px;
+    background-image: url('../images/fruit.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+&__title {
+    top: 10%;
+    text-align: center;
+    position: absolute;
+    color: white; 
+    font-size: 5.5em; 
+    font-family: DM Sans; 
+    text-transform: uppercase; 
+    line-height: 84px;
+    word-wrap: break-word;
+}
+}
+}
+
+/* Estilos para pantallas en el rango entre 760px y 1280px */
+@media screen and (min-width: 760px) and (max-width: 1280px) {
+    .subscribe{
+    &__images {
+        top: 100px; /* Ajusta la posición en función de la resolución */
+        width: 100%; /* Ancho al 100% para adaptarse al contenedor padre */
+        height: auto; /* Altura automática para mantener la relación de aspecto */
+    }
+
+    &__image1 {
+        width: 100%; /* Ancho al 100% para adaptarse al contenedor padre */
+        max-width: 344px; 
+        height: 480px; 
+        border-radius: 20px
+    }
+
+    &__image2 {
+        width: 100%; /* Ancho al 100% para adaptarse al contenedor padre */
+        max-width: 344px; 
+        height: 480px; 
+        border-radius: 20px
+    }
+
+    &__title {
+        top: 5%; /* Ajusta la posición en función de la resolución */
+        font-size: 4em; /* Tamaño de fuente más pequeño para este rango de tamaño de pantalla */
+        line-height: 64px; /* Ajusta la altura de línea según sea necesario para este rango de tamaño de pantalla */
     }
 }
+}
+
